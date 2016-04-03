@@ -207,7 +207,7 @@ def put_file(title=None, data=None, sheet_names=None, fname=None, update=False, 
         raise ValueError('`title` not found in options. exiting')
     if opts['fname'] is None:
         if opts['data'] is not None:
-            fname = os.path.join(os.environ['TMPDIR'], str(int(time.time())))
+            fname = os.path.join(os.environ['TMPDIR'], str(int(time.time()))) + '.xlsx'
             write_xlsx(data, fname, sheet_names)
         else:
             raise ValueError('neither `title` nor `data` found in options. exiting')
