@@ -156,7 +156,7 @@ def write_xlsx(data, fname, sheet_names=None):
             df = pd.DataFrame(df)
         except:
             logger.exception('could not convert data object: %s into pandas.DataFrame', df)
-        df.to_excel(writer, sheet_name, index=False)
+        df.to_excel(writer, sheet_name)
     writer.save()
 
 
